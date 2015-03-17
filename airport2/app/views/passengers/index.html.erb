@@ -1,0 +1,23 @@
+<h1>Passenger#index</h1>
+<h1>Vuelo <%= @flightp %> </h1>
+<div id="main-container" class="container-fluid">
+<table class="table table-striped" >
+<tr>
+      <th>Nombre</th>
+      <th>Pasaporte</th>
+      <th colspan="6"></th>
+    <% @passengers.map do |passenger|%>
+</tr>
+ 
+ <tr>
+      <td><%= passenger.name %></td>
+      <td><%= passenger.passport %></td>
+      
+ </tr>
+  
+<% end %>
+<table>
+<td><%= link_to 'Vuelos', root_path %></td>
+
+
+

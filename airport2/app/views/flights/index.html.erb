@@ -1,0 +1,24 @@
+<h1>Flights#index</h1>
+<p>Find me in app/views/flights/index.html.erb</p>
+<div id="main-container" class="container-fluid">
+<h1>Vuelos</h1>
+
+<table class="table table-striped" >
+  <tr>
+    	<th>Vuelo</th>
+    	<th>Salida</th>
+      <th>Llegada</th>
+    	<th colspan="6"></th>
+
+  <% @flights.map do |flight|%>
+	</tr>
+ 
+ <tr>
+      <td><%= flight.number %></td>
+      <td><%= flight.departure.date %></td>
+	  <td><%= flight.arrival.date %></td>
+    <td><%= link_to 'Pasajeros del Vuelo', flight_passengers_path(flight_id:flight.id) %></td>
+</tr>
+
+<% end %>
+</table>
